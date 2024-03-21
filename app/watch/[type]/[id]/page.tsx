@@ -39,7 +39,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 		description: `${content.overview}`,
 		openGraph: {
 			type: 'website',
-			url: `nextwave-sigma.vercel.app/watch/${type}/${id}`,
+			url: `https://nextwave-sigma.vercel.app/watch/${type}/${id}`,
 			title: `Watch ${content.title || content.name} for free on Papavanz`,
 			images: [image && { url: `/api/og?img=${image}&title=${content.title || content.name}` }],
 		},
