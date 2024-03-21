@@ -23,9 +23,9 @@ export const viewport: Viewport = {
 	maximumScale: 1,
 };
 export const metadata: Metadata = {
-	metadataBase: new URL('https://watchwave-v2.vercel.app/'),
-	title: 'WatchWave',
-	description: 'WatchWave is a free streaming service for movies and TV shows.',
+	metadataBase: new URL('https://nextwave-sigma.vercel.app/'),
+	title: 'Papavanz',
+	description: 'Papavanz is a free streaming service for movies and TV shows.',
 	keywords:
 		'watch movies, movies online, watch TV, TV online, TV shows online, watch TV shows, stream movies, stream tv, instant streaming, watch online, movies, watch movies United States, watch TV online, no download, full length movies watch online, movies online, movies, watch movies online, watch movies, watch movies online free, watch movies for free, watch streaming media, watch tv online, watch movies online, watch movies online free, watch movies for free, watch streaming media, watch tv online',
 	icons: {
@@ -34,11 +34,11 @@ export const metadata: Metadata = {
 	},
 	openGraph: {
 		type: 'website',
-		url: `https://watchwave-v2.vercel.app`,
+		url: `https://nextwave-sigma.vercel.app/`,
 		images: [
 			{
 				url: '/Meta.png',
-				alt: 'WatchWave Logo',
+				alt: 'Papavanz Logo',
 			},
 		],
 	},
