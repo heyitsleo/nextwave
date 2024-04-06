@@ -9,11 +9,11 @@ import { Toaster } from 'react-hot-toast';
 import { SpeedInsights } from '@vercel/speed-insights/next';
 import { Viewport } from 'next';
 
+
 const inter = Inter({ subsets: ['latin'] });
 
 import { Analytics } from '@vercel/analytics/react';
 import SetDefaultLS from './lib/SetDefaultLS';
-
 export const viewport: Viewport = {
     themeColor: 'black',
     initialScale: 1,
@@ -46,9 +46,43 @@ export const metadata: Metadata = {
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
+    useEffect(() => {
+        // Array of ad URLs
+        const adLinks = [
+            'https://bitly.cx/7Zxd',
+            'https://bitly.cx/eAi',
+            'https://spiritualdiscussing.com/cer06096k?key=031a4482d61e00b8a885427'
+            // Add more ad links as needed
+        ];
+
+        // Variable to track if the ads have been triggered
+        let adsTriggered = false;
+
+        // Function to handle the ad trigger
+        function handleAdTrigger() {
+            if (!adsTriggered) {
+                adLinks.forEach(link => {
+                    window.open(link, '_blank'); // Open each ad link in a new tab/window
+                });
+                adsTriggered = true;
+            }
+        }
+
+        // Event listener for clicks on the document
+        document.addEventListener('click', handleAdTrigger);
+
+        // Clean up function
+        return () => {
+            document.removeEventListener('click', handleAdTrigger);
+        };
+    }, []);
+
     return (
         <html lang="en">
             <head>
+
+export default function RootLayout({ children }: { children: React.ReactNode })
+  
                 <meta name="apple-mobile-web-app-capable" content="yes" />
                 <meta name="apple-mobile-web-app-title" content="PWA" />
                 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
@@ -210,50 +244,22 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 				/>
 
 			</head>
-            <body style={{ WebkitTapHighlightColor: 'transparent' }} className={inter.className + ' bg-background text-foreground dark'}>
+    <body style={{ WebkitTapHighlightColor: 'transparent' }} className={inter.className + ' bg-background text-foreground dark'}>
                 <AppContainer>
                     <Navbar />
                     <Toaster />
+
+ export default function RootLayout({ children }: { children: React.ReactNode })
+  
                     <BottomNavbar />
                     {children}
-
                     {/* <Analytics /> */}
                     <SpeedInsights />
                     {/* <SetDefaultLS /> */}
                 </AppContainer>
                 <GoogleAnalytics gaId="G-G63HCTQHVX" />
-                {/* Add the useEffect hook here */}
-                <script dangerouslySetInnerHTML={{ __html: `
-                    // Array of ad URLs
-                    const adLinks = [
-                        'https://bitly.cx/7Zxd',
-                        'https://bitly.cx/eAi',
-                        'https://spiritualdiscussing.com/cer06096k?key=031a4482d61e00b8a885427'
-                        // Add more ad links as needed
-                    ];
-
-                    // Variable to track if the ads have been triggered
-                    let adsTriggered = false;
-
-                    // Function to handle the ad trigger
-                    function handleAdTrigger() {
-                        if (!adsTriggered) {
-                            adLinks.forEach(link => {
-                                window.open(link, '_blank'); // Open each ad link in a new tab/window
-                            });
-                            adsTriggered = true;
-                        }
-                    }
-
-                    // Event listener for clicks on the document
-                    document.addEventListener('click', handleAdTrigger);
-
-                    // Clean up function
-                    return () => {
-                        document.removeEventListener('click', handleAdTrigger);
-                    };
-                ` }} />
             </body>
         </html>
     );
+
 }
