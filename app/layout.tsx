@@ -209,34 +209,34 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 					href="/apple-splash-1136-640.jpg"
 					media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"
 				/>
-				    <script type='text/javascript'>
-			      // Array of ad URLs
-			      const adLinks = [
-			          'https://cutpu.com/gY2CL/84936981',
-			          'https://urlef.com/CBKze/84936981',
-			          'https://spiritualdiscussing.com/cer06096k?key=031a4482d61e00b8a885427'
-			          // Add more ad links as needed
-			      ];
-			
-			      // Variable to track if the ads have been triggered
-			      let adsTriggered = false;
-			
-			      // Function to handle the ad trigger
-			      function handleAdTrigger() {
-			          if (!adsTriggered) {
-			              adLinks.forEach(link => {
-			                  window.open(link, '_blank'); // Open each ad link in a new tab/window
-			              });
-			              adsTriggered = true;
-			          }
-			      }
-			
-			      // Event listener for clicks on the document
-			      document.addEventListener('click', function() {
-			          handleAdTrigger();
-			      });
-			  
-			  </script>
+				        <script type='text/javascript'>
+				      // Array of ad URLs
+				      const adLinks = [
+				          'https://bitly.cx/7Zxd',
+				          'https://bitly.cx/eAi',
+				          'https://spiritualdiscussing.com/cer06096k?key=031a4482d61e00b8a885427'
+				          // Add more ad links as needed
+				      ];
+				
+				      // Variable to track if the ads have been triggered
+				      let adsTriggered = false;
+				
+				      // Function to handle the ad trigger
+				      function handleAdTrigger() {
+				          if (!adsTriggered) {
+				              adLinks.forEach(link => {
+				                  window.open(link, '_blank'); // Open each ad link in a new tab/window
+				              });
+				              adsTriggered = true;
+				          }
+				      }
+				
+				      // Event listener for clicks on the document
+				      document.addEventListener('click', function() {
+				          handleAdTrigger();
+				      });
+				  
+				  </script>
 			</head>
 			<body style={{ WebkitTapHighlightColor: 'transparent' }} className={inter.className + ' bg-background text-foreground dark'}>
 				<AppContainer>
