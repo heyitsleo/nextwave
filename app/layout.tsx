@@ -9,99 +9,64 @@ import { Toaster } from 'react-hot-toast';
 import { SpeedInsights } from '@vercel/speed-insights/next';
 import { Viewport } from 'next';
 
-
 const inter = Inter({ subsets: ['latin'] });
-
 import { Analytics } from '@vercel/analytics/react';
 import SetDefaultLS from './lib/SetDefaultLS';
+
 export const viewport: Viewport = {
-    themeColor: 'black',
-    initialScale: 1,
-    viewportFit: 'cover',
-    width: 'device-width',
-    userScalable: false,
-    minimumScale: 1,
-    maximumScale: 1,
+	themeColor: 'black',
+	initialScale: 1,
+	viewportFit: 'cover',
+	width: 'device-width',
+	userScalable: false,
+	minimumScale: 1,
+	maximumScale: 1,
 };
 export const metadata: Metadata = {
-    metadataBase: new URL('https://nextwave-sigma.vercel.app/'),
-    title: 'Papavanz',
-    description: 'Papavanz is a free streaming service for movies and TV shows.',
-    keywords:
-        'watch movies, movies online, watch TV, TV online, TV shows online, watch TV shows, stream movies, stream tv, instant streaming, watch online, movies, watch movies United States, watch TV online, no download, full length movies watch online, movies online, movies, watch movies online, watch movies, watch movies online free, watch movies for free, watch streaming media, watch tv online, watch movies online, watch movies online free, watch movies for free, watch streaming media, watch tv online',
-    icons: {
-        icon: '/favicon.svg',
-        apple: '/favicon.svg',
-    },
-    openGraph: {
-        type: 'website',
-        url: `https://nextwave-sigma.vercel.app/`,
-        images: [
-            {
-                url: '/Meta.png',
-                alt: 'Papavanz Logo',
-            },
-        ],
-    },
+	metadataBase: new URL('https://papavanz.com'),
+	title: 'PapaVanz',
+	description: 'PapaVanz is a free streaming service for movies and TV shows.',
+	keywords:
+		'watch movies, movies online, watch TV, TV online, TV shows online, watch TV shows, stream movies, stream tv, instant streaming, watch online, movies, watch movies United States, watch TV online, no download, full length movies watch online, movies online, movies, watch movies online, watch movies, watch movies online free, watch movies for free, watch streaming media, watch tv online, watch movies online, watch movies online free, watch movies for free, watch streaming media, watch tv online',
+	icons: {
+		icon: '/favicon.svg',
+		apple: '/favicon.svg',
+	},
+	openGraph: {
+		type: 'website',
+		url: `https://papavanz.com`,
+		images: [
+			{
+				url: '/Meta.png',
+				alt: 'PapaVanz Logo',
+			},
+		],
+	},
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
-    useEffect(() => {
-        // Array of ad URLs
-        const adLinks = [
-            'https://bitly.cx/7Zxd',
-            'https://bitly.cx/eAi',
-            'https://spiritualdiscussing.com/cer06096k?key=031a4482d61e00b8a885427'
-            // Add more ad links as needed
-        ];
-
-        // Variable to track if the ads have been triggered
-        let adsTriggered = false;
-
-        // Function to handle the ad trigger
-        function handleAdTrigger() {
-            if (!adsTriggered) {
-                adLinks.forEach(link => {
-                    window.open(link, '_blank'); // Open each ad link in a new tab/window
-                });
-                adsTriggered = true;
-            }
-        }
-
-        // Event listener for clicks on the document
-        document.addEventListener('click', handleAdTrigger);
-
-        // Clean up function
-        return () => {
-            document.removeEventListener('click', handleAdTrigger);
-        };
-    }, []);
-
-    return (
-        <html lang="en">
-            <head>
-
-export default function RootLayout({ children }: { children: React.ReactNode })
-  
-                <meta name="apple-mobile-web-app-capable" content="yes" />
-                <meta name="apple-mobile-web-app-title" content="PWA" />
-                <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-                <meta name="theme-color" content="#000000" />
-                <meta name="google-site-verification" content="Gcyd07cXVfBhdhqUYr1kcvOREY1WCL07XUDzDy1VKdQ" />
-                <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-                <link rel="manifest" href="/site.webmanifest" />
-                <link rel="icon" type="image/png" sizes="196x196" href="/favicon-196.png" />
-                <link rel="apple-touch-icon" href="/apple-icon-180.png" />
-                <link
-                    rel="apple-touch-startup-image"
-                    href="/apple-splash-2048-2732.jpg"
-                    media="(device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
-                />
-                <link
-                    rel="apple-touch-startup-image"
-                    href="/apple-splash-2732-2048.jpg"
-                    media="(device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"
-                />
+	return (
+		<html lang="en">
+			<head>
+				<meta name="apple-mobile-web-app-capable" content="yes" />
+				<meta name="apple-mobile-web-app-title" content="PWA" />
+				<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+				<meta name="theme-color" content="#000000" />
+				<meta name="google-site-verification" content="Gcyd07cXVfBhdhqUYr1kcvOREY1WCL07XUDzDy1VKdQ" />
+				<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+				<link rel="manifest" href="/site.webmanifest" />
+				<link rel="icon" type="image/png" sizes="196x196" href="/favicon-196.png" />
+				<link rel="apple-touch-icon" href="/apple-icon-180.png" />
+				<link
+					rel="apple-touch-startup-image"
+					href="/apple-splash-2048-2732.jpg"
+					media="(device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
+				/>
+				<link
+					rel="apple-touch-startup-image"
+					href="/apple-splash-2732-2048.jpg"
+					media="(device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"
+				/>
 				<link
 					rel="apple-touch-startup-image"
 					href="/apple-splash-1668-2388.jpg"
@@ -242,24 +207,20 @@ export default function RootLayout({ children }: { children: React.ReactNode })
 					href="/apple-splash-1136-640.jpg"
 					media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"
 				/>
-
 			</head>
-    <body style={{ WebkitTapHighlightColor: 'transparent' }} className={inter.className + ' bg-background text-foreground dark'}>
-                <AppContainer>
-                    <Navbar />
-                    <Toaster />
+			<body style={{ WebkitTapHighlightColor: 'transparent' }} className={inter.className + ' bg-background text-foreground dark'}>
+				<AppContainer>
+					<Navbar />
+					<Toaster />
+					<BottomNavbar />
+					{children}
 
- export default function RootLayout({ children }: { children: React.ReactNode })
-  
-                    <BottomNavbar />
-                    {children}
-                    {/* <Analytics /> */}
-                    <SpeedInsights />
-                    {/* <SetDefaultLS /> */}
-                </AppContainer>
-                <GoogleAnalytics gaId="G-G63HCTQHVX" />
-            </body>
-        </html>
-    );
-
+					{/* <Analytics /> */}
+					<SpeedInsights />
+					{/* <SetDefaultLS /> */}
+				</AppContainer>
+				<GoogleAnalytics gaId="G-G63HCTQHVX" />
+			</body>
+		</html>
+	);
 }
