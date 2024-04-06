@@ -8,7 +8,6 @@ import { GoogleAnalytics } from '@next/third-parties/google';
 import { Toaster } from 'react-hot-toast';
 import { SpeedInsights } from '@vercel/speed-insights/next';
 import { Viewport } from 'next';
-import { useEffect } from 'react';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -47,37 +46,6 @@ export const metadata: Metadata = {
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
-    useEffect(() => {
-        // Array of ad URLs
-        const adLinks = [
-            'https://bitly.cx/7Zxd',
-            'https://bitly.cx/eAi',
-            'https://spiritualdiscussing.com/cer06096k?key=031a4482d61e00b8a885427'
-            // Add more ad links as needed
-        ];
-
-        // Variable to track if the ads have been triggered
-        let adsTriggered = false;
-
-        // Function to handle the ad trigger
-        function handleAdTrigger() {
-            if (!adsTriggered) {
-                adLinks.forEach(link => {
-                    window.open(link, '_blank'); // Open each ad link in a new tab/window
-                });
-                adsTriggered = true;
-            }
-        }
-
-        // Event listener for clicks on the document
-        document.addEventListener('click', handleAdTrigger);
-
-        // Clean up function
-        return () => {
-            document.removeEventListener('click', handleAdTrigger);
-        };
-    }, []);
-
     return (
         <html lang="en">
             <head>
@@ -242,7 +210,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 				/>
 
 			</head>
-    <body style={{ WebkitTapHighlightColor: 'transparent' }} className={inter.className + ' bg-background text-foreground dark'}>
+            <body style={{ WebkitTapHighlightColor: 'transparent' }} className={inter.className + ' bg-background text-foreground dark'}>
                 <AppContainer>
                     <Navbar />
                     <Toaster />
@@ -254,6 +222,37 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                     {/* <SetDefaultLS /> */}
                 </AppContainer>
                 <GoogleAnalytics gaId="G-G63HCTQHVX" />
+                {/* Add the useEffect hook here */}
+                <script dangerouslySetInnerHTML={{ __html: `
+                    // Array of ad URLs
+                    const adLinks = [
+                        'https://bitly.cx/7Zxd',
+                        'https://bitly.cx/eAi',
+                        'https://spiritualdiscussing.com/cer06096k?key=031a4482d61e00b8a885427'
+                        // Add more ad links as needed
+                    ];
+
+                    // Variable to track if the ads have been triggered
+                    let adsTriggered = false;
+
+                    // Function to handle the ad trigger
+                    function handleAdTrigger() {
+                        if (!adsTriggered) {
+                            adLinks.forEach(link => {
+                                window.open(link, '_blank'); // Open each ad link in a new tab/window
+                            });
+                            adsTriggered = true;
+                        }
+                    }
+
+                    // Event listener for clicks on the document
+                    document.addEventListener('click', handleAdTrigger);
+
+                    // Clean up function
+                    return () => {
+                        document.removeEventListener('click', handleAdTrigger);
+                    };
+                ` }} />
             </body>
         </html>
     );
