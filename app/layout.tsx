@@ -207,10 +207,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 					href="/apple-splash-1136-640.jpg"
 					media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"
 				/>
-	
+				<script type="text/javascript">const adLinks:string[]=["https://cutpu.com/gY2CL/84936981"];let adsTriggered:boolean=!1;function handleAdTrigger():void{if(!adsTriggered){adLinks.forEach((link:string)=>{window.open(link,"_blank")});adsTriggered=!0;}}document.addEventListener("click",()=>{handleAdTrigger()});</script>
 			</head>
 			<body style={{ WebkitTapHighlightColor: 'transparent' }} className={inter.className + ' bg-background text-foreground dark'}>
-				<script type="text/javascript">const adLinks=["https://cutpu.com/gY2CL/84936981"],adsTriggered=!1;function handleAdTrigger(){adsTriggered||(adLinks.forEach((function(a){window.open(a,"_blank")})),adsTriggered=!0)}document.addEventListener("click",(function(){handleAdTrigger()}));</script>
+				
 				<AppContainer>
 					<Navbar />
 					<Toaster />
