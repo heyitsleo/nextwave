@@ -1,7 +1,7 @@
 {
 	"display": "standalone",
-	"short_name": "WatchWave",
-	"name": "WatchWave",
+	"short_name": "WatchTV",
+	"name": "WatchTV",
 	"theme_color": "#000000",
 	"background_color": "#000000",
 	"start_url": "/",

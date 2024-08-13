@@ -36,16 +36,16 @@ const Main = ({ params }: { params: { type: string; id: number } }) => {
 	const [isinDMCA, setIsInDMCA] = useState<boolean>(false);
 
 	const sourceCollectionMovie = [
-		`https://vidsrc.to/embed/movie/${id}`,
-		`https://vidsrc.me/embed/movie?tmdb=${id}`,
+		`https://vidsrc.pro/embed/movie/${id}`,
+		`https://vidsrc.cc/v2/embed/movie?tmdb=${id}`,
 		`https://embed.smashystream.com/playere.php?tmdb=${id}`,
 		`https://multiembed.mov/directstream.php?video_id=${id}&tmdb=1`,
 		`https://anyembed.xyz/movie/${id}`,
 	];
 	const sourceCollectionTV = result &&
 		'name' in result && [
-			`https://vidsrc.to/embed/tv/${id}/${result?.seasons[0]?.name === 'Specials' ? season : season + 1}/${episode}`,
-			`https://vidsrc.me/embed/tv?tmdb=${id}&season=${
+			`https://vidsrc.pro/embed/tv/${id}/${result?.seasons[0]?.name === 'Specials' ? season : season + 1}/${episode}`,
+			`https://vidsrc.cc/v2/embed/tv?tmdb=${id}&season=${
 				result?.seasons[0]?.name === 'Specials' ? season : season + 1
 			}&episode=${episode}&color=006FEE`,
 			`https://embed.smashystream.com/playere.php?tmdb=${id}&season=${
@@ -86,15 +86,6 @@ const Main = ({ params }: { params: { type: string; id: number } }) => {
 	const { isOpen, onOpenChange, onOpen } = useDisclosure();
 	const adb = useDisclosure();
 
-	useEffect(() => {
-		DetectAdblock((detected) => {
-			console.log('Adblock detected:', detected);
-			if (detected) {
-			} else {
-				adb.onOpen();
-			}
-		});
-	}, []);
 	useEffect(() => {
 		console.log(`%c ${season} ${episode}`, 'background: #222; color: #bada55; font-size: 25px; font-weight: bold;');
 	}, [season, episode]);

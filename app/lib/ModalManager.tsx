@@ -40,7 +40,7 @@ export const ModalManager = ({
 								<NLink as={Link} isExternal href="https://github.com/gorhill/uBlock#readme">
 									Ublock Origin
 								</NLink>{' '}
-								while watching videos on WatchWave. There are spammy ads on the video players, which are out of our control and
+								while watching videos on WatchTV. There are spammy ads on the video players, which are out of our control and
 								can&apos;t be disabled. Using an ad blocker is an easy solution to get rid of the ads on the video players.
 							</p> */}
               <div className="px-2">
