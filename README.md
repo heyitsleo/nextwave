@@ -18,8 +18,9 @@
 *** for contributors-url, forks-url, etc. This is an optional, concise syntax you may use.
 *** https://www.markdownguide.org/basic-syntax/#reference-style-links
 -->
+<div align="center">
 [![License](https://img.shields.io/github/license/othneildrew/Best-README-Template.svg?style=for-the-badge)](https://github.com/Lemirq/watchwave-njs/blob/master/LICENSE.txt)
-
+</div>
 
 
 <!-- PROJECT LOGO -->
