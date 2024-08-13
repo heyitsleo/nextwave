@@ -18,9 +18,6 @@
 *** for contributors-url, forks-url, etc. This is an optional, concise syntax you may use.
 *** https://www.markdownguide.org/basic-syntax/#reference-style-links
 -->
-<div align="center">
-[![License](https://img.shields.io/github/license/othneildrew/Best-README-Template.svg?style=for-the-badge)](https://github.com/Lemirq/watchwave-njs/blob/master/LICENSE.txt)
-</div>
 
 
 <!-- PROJECT LOGO -->
@@ -30,16 +27,16 @@
     <img src="https://watchwave-v2.vercel.app/favicon.svg" alt="Logo" width="80" height="80">
   </a>
 
-  <h3 align="center">WatchWave</h3>
+  <h3 align="center">NextWave (Watchwave fork)</h3>
   <p align="center">
     A free and open-sourced movie and TV streaming platform.
   </p>
   <p align="center">
-    <a href="https://watchwave-v2.vercel.app/">View Demo</a>
+    <a href="https://watchwave.starnode.host/">View Demo</a>
     ·
-    <a href="mailto:519vihaansh@gmail.com">Report Bug</a>
+    <a href="https://discord.com">Report Bug</a>
     ·
-    <a href="mailto:519vihaansh@gmail.com">Request Feature</a>
+    <a href="https://google.com">Request Feature</a>
   </p>
 </div>
 
@@ -66,12 +63,13 @@
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-
+<div align="center">
+<a href="https://github.com/heyitsleo/nextwave/blob/main/LICENSE">
+<img src="https://img.shields.io/github/license/othneildrew/Best-README-Template.svg?style=for-the-badge" alt="Badge">
+</a>
+</div>
 
 <!-- GETTING STARTED -->
-## Getting Started
-
-To locally run WatchWave, follow these steps:
 ### Prerequisites
 Have NodeJS installed on your local machine
 
@@ -81,15 +79,15 @@ Have NodeJS installed on your local machine
    
 2. Clone the repo
    ```sh
-   git clone https://github.com/Lemirq/watchwave-njs.git
+   git clone https://github.com/heyitsleo/nextwave.git
    ```
 3. Install NPM packages
    ```sh
    npm install
    ```
-4. Make a new ```.env.local``` file and enter your API:
+4. Make a new ```.env``` file and enter your API:
    ```env
-   NEXT_PUBLIC_TOKEN=<Pubic token for tmdb>
+   NEXT_PUBLIC_TOKEN=<TMDB_READ_TOKEN>
    ```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -99,16 +97,14 @@ Have NodeJS installed on your local machine
 ## Roadmap
 - [ ] Add recommendations based on past watchlist
 
-If you would like to request a feature, please email me directly.
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
 <!-- CONTACT -->
-## Contact
+## Links
 
-Vihaan Sharma - [@vhaanca](https://twitter.com/vhaanca) - 519vihaansh@gmail.com
-
-Project Link: [https://github.com/Lemirq/watchwave-njs](https://github.com/Lemirq/watchwave-njs)
+Original Credits to: [https://watchwave-v2.vercel.app](https://watchwave-v2.vercel.app)
+Project Link: [https://github.com/heyitsleo/nextwave](https://github.com/heyitsleo/nextwave)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -158,7 +154,3 @@ View `package.json` to see what's used in building WatchWave.
 [Bootstrap-url]: https://getbootstrap.com
 [JQuery.com]: https://img.shields.io/badge/jQuery-0769AD?style=for-the-badge&logo=jquery&logoColor=white
 [JQuery-url]: https://jquery.com 
-"# nextwave" 
-"# nextwave" 
-"# nextwave" 
-"# nextwave" 
