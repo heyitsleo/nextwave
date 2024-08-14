@@ -14,7 +14,6 @@ import React, { useEffect, useState } from 'react';
 import { BsChevronDown } from 'react-icons/bs';
 import { IoCheckmark, IoAdd, IoArrowDown } from 'react-icons/io5';
 import Footer from '@/app/components/Footer';
-import { DetectAdblock } from '@scthakuri/adblock-detector';
 import useSetTracker from '@/app/lib/firebase/useSetTracker';
 import { doc } from 'firebase/firestore';
 import { db } from '@/app/lib/firebase/firebase';
